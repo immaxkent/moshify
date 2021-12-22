@@ -64,7 +64,7 @@ a {
 .link-arrow::after {
   content: "-->";
   margin-left: 5px;
-  /* notcie that this transition decleration is given in the section
+  /* notice that this transition decleration is given in the section
 where the content itself is defined*/
   transition: margin 0.15s;
 }
@@ -74,5 +74,34 @@ where the content itself is defined*/
 @media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+
+.badge {
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 2rem;
+}
+.badge--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.badge--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+.badge--small {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+  .badge--small {
+    font-size: 1.2rem;
   }
 }
