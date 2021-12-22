@@ -1,3 +1,4 @@
+/* colours & typography */
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
@@ -47,5 +48,31 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  /* notcie that this transition decleration is given in the section
+where the content itself is defined*/
+  transition: margin 0.15s;
+}
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
