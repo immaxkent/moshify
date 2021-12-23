@@ -6,6 +6,11 @@
   --color-heading: #1b0760;
   --color-body: #918ca4;
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
@@ -147,4 +152,63 @@ where the content itself is defined*/
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+
+/*the first classification is the STRUCTURE, .btn - this should be seperated
+from the SKINS which dynamically change depending on the use case and interaction
+of the button */
+
+.btn {
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 1rem;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* thus, now we see the skins being defined. */
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: #3a8ffd;
+}
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #00c8eb;
+}
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn--accent:hover {
+  background: #ec3000;
+}
+
+/*note that this structure/skin combination has been defined for
+inline buttons. for block buttons, different structures are required,
+as these buttons will be required to fill the container in 
+which they are placed*/
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
