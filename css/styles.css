@@ -221,7 +221,7 @@ which they are placed*/
   border-radius: 30px;
   border: 1px solid var(--color-border);
   color: var(--color-heading);
-  margin: 3rem;
+  /* margin: 1rem; */
   outline: 0;
   padding: 1.5rem 3rem;
   font-size: 2rem;
@@ -234,6 +234,9 @@ which they are placed*/
 .input--group .input {
   border: 0;
   flex-grow: 1;
+}
+.input--group .btn {
+  margin: 4px;
 }
 @media screen and (min-width: 1024px) {
   .input {
