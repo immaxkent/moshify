@@ -325,3 +325,16 @@ which they are placed*/
     font-size: 1.6rem;
   }
 }
+/* Media Objects */
+.media {
+  display: flex;
+}
+.media__title {
+  margin-top: 0;
+}
+.media__body {
+  margin: 0rem 2rem;
+}
+.media__image {
+  margin-top: 0.5rem;
+}
