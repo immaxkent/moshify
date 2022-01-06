@@ -34,6 +34,8 @@ h2,
 h3 {
   color: var(--color-heading);
   margin-bottom: 1rem;
+
+  line-height: 7rem;
 }
 
 h1 {
@@ -246,6 +248,13 @@ which they are placed*/
 .btn--block {
   width: 100%;
   display: inline-block;
+}
+.btn--stretched {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-left: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -652,5 +661,80 @@ Here is my attempt:
   }
   .nav__item {
     border: 0;
+  }
+}
+
+/* Hero 
+
+here's my attempt:
+
+
+.hero h1 {
+  color: #fff;
+}
+.hero {
+  text-align: center;
+}
+.hero img {
+  width: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  .hero__div {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  .hero .btn {
+    margin-left: 0;
+    margin-top: none;
+  }
+  .hero h1 {
+    line-height: 8rem;
+  }
+  .hero p {
+    letter-spacing: 2px;
+  }
+}
+
+You found that THE KEY DIFFERENCE here was declaring the
+image to take up 100% of the width of the containing 
+element, instead of giving it an explicit width.
+
+ALSO there was no need to wrap the grid elements inside a div 
+to yield a cenetered distribution: this was rather done via use of 
+the <header> element, which automatically centers the content.
+
+*/
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 2px;
+  margin: 2rem 0 5rem;
+}
+.hero__image {
+  width: 100%;
+}
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+}
+.hero__content {
+  margin-left: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+  .hero__content {
+    text-align: left;
+    align-self: center;
   }
 }
