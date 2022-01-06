@@ -229,6 +229,11 @@ of the button */
   color: var(--color-heading);
 }
 
+.btn--long {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
 /*note that this structure/skin combination has been defined for
 inline buttons. for block buttons, different structures are required,
 as these buttons will be required to fill the container in 
@@ -408,6 +413,9 @@ which they are placed*/
   .grid--1x3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .grid--1x2i {
+    grid-template-columns: 1fr 250px;
+  }
 }
 /* Testimonials */
 /*
@@ -452,5 +460,76 @@ which they are placed*/
   }
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+/* Callouts 
+
+Here is my attempt: 
+
+.callout {
+  padding: 3rem 3rem;
+}
+.callout1 {
+  height: 150px;
+  background: var(--color-primary);
+}
+.callout2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: var(--color-primary);
+}
+
+.grid__callout {
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.callout1 > p,
+.callout1 > h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+.callout1 > h3 {
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+.callout1 > p {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+*/
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+.callout__content {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start;
   }
 }
