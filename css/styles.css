@@ -108,6 +108,11 @@ where the content itself is defined*/
   background: var(--color-secondary);
   color: #fff;
 }
+.badge--domain {
+  background: none;
+  color: #1b0760;
+  font-weight: 800;
+}
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
@@ -203,9 +208,17 @@ of the button */
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
+  outline: 0;
 }
 
 /* thus, now we see the skins being defined. */
+
+.btn .icon {
+  width: rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
 
 .btn--primary {
   background-color: var(--color-primary);
@@ -736,5 +749,50 @@ the <header> element, which automatically centers the content.
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Domain Block 
+
+here's my attempt;
+
+.domain__badges {
+  display: flex;
+  justify-content: center;
+}
+.domain__badges > .badge--small {
+  margin: 3rem 3rem 1rem 1rem;
+}
+.block__center {
+  width: 700px;
+  margin: 0 auto;
+}
+.block__center > .input--group {
+  box-shadow: 0 0 20px lightgrey;
+  border: none;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+*/
+.block__domain .input--group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 720px;
+}
+.domain--prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6rem 6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .domain--prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-rows: 6rem;
   }
 }
