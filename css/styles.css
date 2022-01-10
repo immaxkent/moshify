@@ -446,7 +446,7 @@ which they are placed*/
 .grid {
   display: grid;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1140px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -614,7 +614,7 @@ Here is my attempt:
   margin-top: 0;
 }
 .block--dark {
-  background: #000000;
+  background: #000;
   color: #7b858b;
 }
 .block--dark .block__heading {
@@ -622,7 +622,7 @@ Here is my attempt:
 }
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 90%);
+  clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 95%);
 }
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
@@ -881,3 +881,19 @@ a media query for larger screens*/
 }
 
 /* Showcase */
+
+.showcase__heading > h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.showcase__media h3 {
+  color: #fff;
+}
+.grid__showcase {
+  align-items: center;
+}
+.grid__showcase div {
+  max-width: 500px;
+  margin: 0px auto;
+}
