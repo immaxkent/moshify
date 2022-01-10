@@ -811,7 +811,7 @@ here's my attempt;
   }
 }
 
-/* Cards */
+/* Cards or 'Plans' */
 
 .block--plans .grid {
   grid-gap: 4rem;
@@ -824,3 +824,60 @@ here's my attempt;
 .plan {
   transition: transform 0.2s ease-out;
 }
+
+/* Features */
+
+/* here's my code: 
+
+.image-features--block {
+  width: 100%;
+}
+.header__features {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.features .grid {
+  grid-gap: 5rem;
+  grid-row-gap: 10rem;
+}
+.features__grid h3 {
+  margin-top: 0;
+}
+*/
+/* Problems in this code section are;
+
+images dont centre align, so during resizing of the 
+browser windows the images seem out of line with the 
+accompanying text
+
+secondly, when the site is resized for mobile the images
+appear in the incorrect order. likely, decleration
+of grd space names is required to be able to construct
+a media query for larger screens*/
+
+.feature__heading {
+  margin: 1rem 0;
+}
+.features--article {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.features__image {
+  width: 100%;
+}
+.features--article div {
+  padding: 3rem 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .features--article:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+.feature-main--heading {
+  text-align: center;
+}
+
+/* Showcase */
