@@ -424,11 +424,11 @@ which they are placed*/
   font-weight: 300;
   font-size: 3rem;
   letter-spacing: 1.5px;
-  margin-bottom: none;
+  margin-bottom: 0;
 }
 .media__description {
   opacity: 0.4;
-  margin: none;
+  margin: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -997,7 +997,7 @@ my code:
     grid-template-columns: 30rem 1fr 1fr 1fr 1fr;
   }
   .footer .icon {
-    display: hidden;
+    display: none;
   }
   .footer .collapsible__content {
     opacity: 1;
